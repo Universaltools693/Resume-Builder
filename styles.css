@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    min-height: 400px;
+    padding: 60px 0;
+}
+
+h1, h2, h3 {
+    color: #007bff;
+}
+
+.ad-banner {
+    width: 100%;
+    height: 90px;
+    background-color: #eee;
+    margin: 20px 0;
+    text-align: center;
+    line-height: 90px;
+    font-size: 16px;
+    color: #666;
+}
+
+#preview {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+#preview h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#preview p, #preview li {
+    margin: 5px 0;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 800px;
+    }
+}
