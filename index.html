@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder Tool</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Animate on Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Resume Builder</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#how-to-use">How to Use</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#builder">Builder</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tips">Tips</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mt-5 pt-5">
+        <!-- Hero Section -->
+        <section id="hero" class="py-5 text-center" data-aos="fade-up">
+            <h1>Welcome to Resume Builder</h1>
+            <p class="lead">Create a professional resume in minutes with our advanced tool.</p>
+            <a href="#builder" class="btn btn-primary btn-lg">Start Building Now</a>
+            <div class="ad-banner mt-4">Ad Banner</div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5" data-aos="fade-up">
+            <h2>About Our Resume Builder</h2>
+            <p>Our Resume Builder is designed to help you craft a standout resume effortlessly. Whether you're a fresh graduate or a seasoned professional, our tool provides all the features you need to present your skills and experience effectively.</p>
+            <p>With a user-friendly interface and powerful customization options, you can create a resume that impresses employers. Explore the sections below to learn more about what makes our tool unique.</p>
+            <div class="ad-banner my-4">Ad Banner</div>
+            <p>We aim to simplify the job application process by providing you with a high-tech solution that saves time and delivers professional results.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-5" data-aos="fade-up">
+            <h2>Features</h2>
+            <ul>
+                <li>Intuitive and easy-to-use interface</li>
+                <li>Real-time resume preview as you type</li>
+                <li>Download your resume as a PDF</li>
+                <li>Support for multiple work experiences, education entries, and skills</li>
+                <li>Responsive design for all devices</li>
+            </ul>
+            <div class="ad-banner my-4">Ad Banner</div>
+            <p>These features ensure that your resume-building experience is seamless and efficient.</p>
+        </section>
+
+        <!-- How to Use Section -->
+        <section id="how-to-use" class="py-5" data-aos="fade-up">
+            <h2>How to Use</h2>
+            <ol>
+                <li>Scroll down to the Builder section.</li>
+                <li>Fill in your personal details, work experience, education, and skills.</li>
+                <li>Preview your resume in real-time.</li>
+                <li>Click "Generate Resume" to download your PDF.</li>
+            </ol>
+            <div class="ad-banner my-4">Ad Banner</div>
+            <p>Follow these simple steps to create a resume that highlights your strengths.</p>
+        </section>
+
+        <!-- Resume Builder Section -->
+        <section id="builder" class="py-5" data-aos="fade-up">
+            <h2>Resume Builder</h2>
+            <div class="ad-banner mb-4">Ad Banner</div>
+            <form id="resume-form">
+                <!-- Personal Information -->
+                <h3>Personal Information</h3>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="phone" name="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="summary" class="form-label">Professional Summary</label>
+                    <textarea class="form-control" id="summary" name="summary" rows="3"></textarea>
+                </div>
+
+                <!-- Work Experience -->
+                <h3>Work Experience</h3>
+                <div id="work-experience">
+                    <div class="work-entry mb-3">
+                        <label class="form-label">Company</label>
+                        <input type="text" class="form-control" name="company[]">
+                        <label class="form-label">Position</label>
+                        <input type="text" class="form-control" name="position[]">
+                        <label class="form-label">Start Date</label>
+                        <input type="text" class="form-control" name="work-start[]">
+                        <label class="form-label">End Date</label>
+                        <input type="text" class="form-control" name="work-end[]">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-control" name="work-desc[]" rows="2"></textarea>
+                    </div>
+                </div>
+                <button type="button" id="add-work" class="btn btn-secondary mb-3">Add Another Work Experience</button>
+
+                <!-- Education -->
+                <h3>Education</h3>
+                <div id="education">
+                    <div class="education-entry mb-3">
+                        <label class="form-label">School</label>
+                        <input type="text" class="form-control" name="school[]">
+                        <label class="form-label">Degree</label>
+                        <input type="text" class="form-control" name="degree[]">
+                        <label class="form-label">Graduation Date</label>
+                        <input type="text" class="form-control" name="grad-date[]">
+                    </div>
+                </div>
+                <button type="button" id="add-education" class="btn btn-secondary mb-3">Add Another Education</button>
+
+                <!-- Skills -->
+                <h3>Skills</h3>
+                <div id="skills">
+                    <div class="skill-entry mb-3">
+                        <label class="form-label">Skill</label>
+                        <input type="text" class="form-control" name="skill[]">
+                    </div>
+                </div>
+                <button type="button" id="add-skill" class="btn btn-secondary mb-3">Add Another Skill</button>
+
+                <!-- Generate Button -->
+                <button type="submit" class="btn btn-primary">Generate Resume</button>
+            </form>
+            <div id="preview" class="mt-4"></div>
+            <div class="ad-banner mt-4">Ad Banner</div>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="py-5" data-aos="fade-up">
+            <h2>Resume Writing Tips</h2>
+            <div class="tip">
+                <h3>Tip 1: Tailor Your Resume</h3>
+                <p>Customize your resume for each job to highlight relevant skills and experience.</p>
+            </div>
+            <div class="tip">
+                <h3>Tip 2: Use Action Verbs</h3>
+                <p>Start bullet points with strong verbs like "managed," "developed," or "created."</p>
+            </div>
+            <div class="ad-banner my-4">Ad Banner</div>
+            <div class="tip">
+                <h3>Tip 3: Keep It Concise</h3>
+                <p>Aim for a one-page resume unless you have extensive experience.</p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-5" data-aos="fade-up">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"This tool made resume writing so easy! I got a job within a week."</p>
+                <p>- John Doe</p>
+            </div>
+            <div class="ad-banner my-4">Ad Banner</div>
+            <div class="testimonial">
+                <p>"Highly professional and user-friendly. Highly recommend!"</p>
+                <p>- Jane Smith</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-3 text-center bg-light">
+        <p>&copy; 2023 Resume Builder. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
